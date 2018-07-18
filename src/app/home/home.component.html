@@ -1,0 +1,35 @@
+<section class="home">
+  <div class="container">
+    <div class="logo">
+      <img src="assets/img/logo.png">
+    </div>
+    <h1>My Contacts</h1>
+    <div class="group">
+      <div class="add">
+        <a href="" routerLink="/add">
+          <p>add contact</p>
+          <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+        </a>
+      </div>
+      <form>
+        <div class="form-group">
+          <input #query type="text" (keyup)="search(query.value)" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="Search">
+        </div>
+      </form>
+      <div class="contacts">
+        <div class="list" *ngFor="let item of searchContact">
+          <h3>{{item.name}}</h3>
+          <p>{{item.phone}}</p>
+          <p>{{item.email}}</p>
+          <p>{{item.gender}}</p>
+          <div class="delet">
+            <a href="" (click)="removeTodo()">
+              <img src="assets/img/delete.png">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

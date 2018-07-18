@@ -1,0 +1,65 @@
+h1{
+    padding-top: 18px;
+    padding-bottom: 13px;
+    font-weight: bold;
+    font-size: 30px;
+}
+input::placeholder ,input{
+    color: #999 !important;
+    opacity: 1  !important;
+    font-weight: bold; 
+}
+input{
+    color: #555 !important;
+
+}
+
+.add{
+  background: #c1c085;
+  border-radius: 5px;
+  padding: 1px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+.add p {   
+    margin: 7px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-transform: capitalize;
+    font-size: 25px;
+
+}
+.delet img {
+    width: 20px
+}
+.contacts{
+    margin-top: -10px
+}
+.list {
+    display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  position: relative;
+  background: #6d6c4f;
+  padding: 10px 15px;
+  border-radius: 9px;
+  margin-bottom: 6px;
+  color: #fff;
+}
+.list h3 {
+    font-size: 22px;
+  text-transform: capitalize;
+  color: #fffab1;
+}
+.list p {    margin-bottom: 0;
+    color: #fff;
+}
+.delet{
+    color: #fff;
+    position: absolute;
+    right: 18px;
+    top: 20px;
+}

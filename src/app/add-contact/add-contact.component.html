@@ -1,0 +1,43 @@
+<section class="home">
+  <div class="container">
+    <div class="logo">
+      <img src="assets/img/logo.png">
+    </div>
+    <h1>Add Contact</h1>
+    <div class="group">
+      <div class="add">
+        <a href="" routerLink="/">
+          <p>Back</p>
+        </a>
+      </div>
+      <form novalidate #fo="ngForm" (ngSubmit)="mySubmit(fo)">
+        <div class="form-group">
+          <input type="text" class="form-control" [(ngModel)]="name" name="name" value="name" #contactName="ngModel" placeholder="Name"
+            required>
+          <div *ngIf="contactName.errors?.required && contactName.touched" class="alert alert-danger">Name is required</div>
+        </div>
+        <div class="form-group">
+          <input type="number" class="form-control" [(ngModel)]="phone" name="phone" value="phone" #contactPhone="ngModel" placeholder="Phone"
+            required>
+          <div *ngIf="contactPhone.errors?.required && contactPhone.touched" class="alert alert-danger">Number Phone is required</div>
+        </div> 
+        <input class="form-control" id="contactemail" type="text" #contactemail="ngModel" [(ngModel)]="email" name="email" value="email"
+          placeholder="Email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+        <div class="md-errors-spacer" [hidden]="contactemail.valid || contactemail.untouched">
+          <div *ngIf="contactemail.errors && contactemail.errors.pattern" class="alert alert-danger">
+            Email is invalid
+          </div>
+        </div>
+        <div class="checkgroup">
+          <label class="radio-inline">
+            <input type="radio"    value="female" (click)="click($event)"> Female</label>
+          <label class="radio-inline">
+            <input type="radio"   value="male" (click)="click($event)"> Male</label>
+        </div>
+        <button type="submit" class="add2" >
+          <p>Add Contact</p>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
